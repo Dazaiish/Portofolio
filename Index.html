@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Professional Portfolio</title>
+    <title>Mohamad Khomeini fahmi | Professional Portfolio</title>
     <!-- Load Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Configure Tailwind for Inter font and custom colors -->
@@ -41,9 +41,9 @@
     <!-- Header & Navigation -->
     <header class="sticky top-0 z-50 bg-bg-main shadow-2xl border-b border-accent-blue/20">
         <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-accent-blue hover:text-text-base transition duration-300">Your Name</a>
+            <a href="#home" class="text-2xl font-bold text-accent-blue hover:text-text-base transition duration-300">Mohamad Khomeini fahmi</a>
             <div class="space-x-4 hidden md:flex">
-                <a href="#about" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">About</a>
+                <!-- Removed 'About' link -->
                 <a href="#skills" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Skills</a>
                 <a href="#projects" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Projects</a>
                 <a href="#contact" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Contact</a>
@@ -68,7 +68,7 @@
         </div>
         <div class="flex flex-col items-center space-y-8 mt-12">
             <a href="#home" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
-            <a href="#about" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+            <!-- Removed 'About' link -->
             <a href="#skills" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
             <a href="#projects" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
             <a href="#contact" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
@@ -93,10 +93,10 @@
                 <!-- Text Content -->
                 <div class="text-center md:text-left">
                     <p class="text-xl text-gray-400 mb-2">Hello, I'm</p>
-                    <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">Your Full Name</h1>
-                    <h2 class="text-3xl font-semibold text-accent-blue mt-2 mb-4">A [Your Role] based in [Your Location]</h2>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">Mohamad Khomeini fahmi</h1>
+                    <h2 class="text-3xl font-semibold text-accent-blue mt-2 mb-4">A Cyber Security Student</h2>
                     <p class="text-lg text-gray-300 max-w-2xl mx-auto md:mx-0">
-                        I specialize in **[Key Technology 1]** and **[Key Technology 2]**, building robust, scalable, and user-friendly applications. Let's create something impactful together.
+                        I am specializing in **vulnerability analysis** and **network defense**, focused on applying analytical skills to solve complex security challenges. My goal is to contribute to a proactive and dynamic cybersecurity environment.
                     </p>
                     
                     <div class="mt-8 flex justify-center md:justify-start space-x-4">
@@ -115,24 +115,7 @@
         <!-- Divider Line -->
         <hr class="max-w-3xl mx-auto border-t border-slate-700">
 
-        <!-- 2. About Me Section -->
-        <section id="about" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">About Me</h3>
-            <!-- Card background changed to a dark surface color -->
-            <div class="bg-bg-surface p-8 rounded-xl shadow-2xl space-y-6">
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    I'm a passionate **[Your Role]** with [X] years of experience turning complex ideas into practical, elegant solutions. My journey began with a curiosity for **[Origin Story, e.g., command line interfaces or design principles]**, and it has evolved into a dedication to clean code and continuous learning.
-                </p>
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    Currently, I am focused on mastering **[Specific Goal/Current Focus, e.g., cloud architecture or advanced React patterns]**. I thrive in collaborative environments and strongly believe that the best products come from a blend of technical excellence and empathetic design.
-                </p>
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    When I'm not coding, you can find me **[Personal Hobby 1, e.g., hiking mountain trails]** or **[Personal Hobby 2, e.g., experimenting with new coffee brews]**.
-                </p>
-            </div>
-        </section>
-
-        <!-- 3. Skills Section -->
+        <!-- 2. Skills Section -->
         <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Technical Skills</h3>
             
@@ -142,51 +125,51 @@
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
                     <h4 class="text-2xl font-bold text-accent-blue mb-4">Languages & Core</h4>
                     <ul class="space-y-2 text-lg text-gray-200">
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> JavaScript (ES6+)</li>
                         <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Python</li>
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> HTML5 / CSS3</li>
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> TypeScript</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Bash/Shell Scripting</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> C / C++</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Network Protocols (TCP/IP)</li>
                     </ul>
                 </div>
                 
-                <!-- Category 2: Frameworks & Libraries -->
+                <!-- Category 2: Tools & Methodologies -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h4 class="text-2xl font-bold text-accent-blue mb-4">Frameworks & Libraries</h4>
+                    <h4 class="text-2xl font-bold text-accent-blue mb-4">Security Tools & Methodologies</h4>
                     <ul class="space-y-2 text-lg text-gray-200">
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> React / Next.js</li>
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Node.js / Express</li>
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Tailwind CSS / Bootstrap</li>
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Angular / Vue.js</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Nmap / Wireshark</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Metasploit / Burp Suite</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> SIEM Systems</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Incident Response</li>
                     </ul>
                 </div>
 
-                <!-- Category 3: Tools & Databases -->
+                <!-- Category 3: Platforms & Concepts -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h4 class="text-2xl font-bold text-accent-blue mb-4">Tools & Databases</h4>
+                    <h4 class="text-2xl font-bold text-accent-blue mb-4">Platforms & Concepts</h4>
                     <ul class="space-y-2 text-lg text-gray-200">
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Git / GitHub</li>
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> MongoDB / PostgreSQL</li>
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> AWS / Firebase</li>
-                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Docker / Kubernetes</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Linux Environments (Kali)</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Cloud Security (AWS/Azure)</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Cryptography</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Secure Coding Principles</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Projects Section -->
+        <!-- 3. Projects Section -->
         <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Featured Projects</h3>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Project Card 1 -->
+                <!-- Project Card 1: Security Focused -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
-                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Project+1"
+                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Intrusion+Detection"
                          alt="Project 1 Thumbnail"
                          class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h4 class="text-2xl font-bold text-white mb-2">Project Name One</h4>
+                    <h4 class="text-2xl font-bold text-white mb-2">IDS Log Analyzer (Python)</h4>
                     <p class="text-gray-400 mb-4">
-                        A dynamic web application for [brief description of purpose]. Built using **React, Node.js, and MongoDB**. Focus on performance and clean architecture.
+                        A Python script developed to parse and analyze large log files from Intrusion Detection Systems (IDS), helping to automate threat pattern identification.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://github.com/yourusername/project-one" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
@@ -198,14 +181,14 @@
                     </div>
                 </div>
 
-                <!-- Project Card 2 -->
+                <!-- Project Card 2: Web Security Focused -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
-                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Project+2"
+                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Vulnerability+Scanner"
                          alt="Project 2 Thumbnail"
                          class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h4 class="text-2xl font-bold text-white mb-2">Project Name Two</h4>
+                    <h4 class="text-2xl font-bold text-white mb-2">Web App Vulnerability Scanner</h4>
                     <p class="text-gray-400 mb-4">
-                        A machine learning model for [industry application]. Developed in **Python** using **TensorFlow** and deployed on **AWS Lambda**.
+                        A proof-of-concept tool utilizing various libraries to identify common web vulnerabilities like XSS and SQL injection in small web applications.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://github.com/yourusername/project-two" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
@@ -217,14 +200,14 @@
                     </div>
                 </div>
 
-                <!-- Project Card 3 -->
+                <!-- Project Card 3: Forensics/Tool Focused -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
-                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Project+3"
+                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Forensics+Tool"
                          alt="Project 3 Thumbnail"
                          class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h4 class="text-2xl font-bold text-white mb-2">Project Name Three</h4>
+                    <h4 class="text-2xl font-bold text-white mb-2">Digital Forensics Script (Bash)</h4>
                     <p class="text-gray-400 mb-4">
-                        A full-stack mobile-first application using **Vue.js** and a **PostgreSQL** database. Designed with a focus on UX/UI best practices.
+                        A set of automated Bash scripts for preliminary data acquisition and triage in Linux environments for forensic analysis.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://github.com/yourusername/project-three" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
@@ -245,13 +228,13 @@
             </div>
         </section>
 
-        <!-- 5. Contact Section -->
+        <!-- 4. Contact Section -->
         <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Contact Me</h3>
             
             <div class="bg-bg-surface p-8 rounded-xl shadow-2xl text-center space-y-6">
                 <p class="text-xl text-gray-300">
-                    I'm currently seeking **[Job Type, e.g., Full-time Frontend Roles]** and am always open to discussing new projects or creative collaborations.
+                    I'm currently seeking **internships and entry-level roles** in cybersecurity and am always open to discussing new security projects or research collaborations.
                 </p>
                 
                 <a href="mailto:your.email@example.com" class="inline-block px-8 py-4 bg-accent-blue text-white text-lg font-bold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
@@ -281,7 +264,7 @@
     <!-- Footer -->
     <footer class="bg-bg-main text-white mt-12 py-8 border-t border-accent-blue/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> Mohamad Khomeini fahmi. All rights reserved.</p>
             <p class="text-sm mt-2 text-gray-500">Template powered by Tailwind CSS and GitHub Pages.</p>
         </div>
     </footer>
