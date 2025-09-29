@@ -46,7 +46,7 @@
                 <!-- Removed 'About' link -->
                 <a href="#skills" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Skills</a>
                 <a href="#projects" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Projects</a>
-                <a href="#contact" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Contact</a>
+                <!-- Removed 'Contact' link -->
             </div>
             <!-- Simple Mobile Menu Button (Icon Placeholder) -->
             <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-text-base hover:bg-bg-surface transition duration-200">
@@ -71,7 +71,7 @@
             <!-- Removed 'About' link -->
             <a href="#skills" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
             <a href="#projects" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
-            <a href="#contact" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+            <!-- Removed 'Contact' link -->
         </div>
     </div>
     
@@ -82,10 +82,10 @@
         <section id="home" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 text-center">
             <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
                 
-                <!-- Image/Avatar Placeholder -->
+                <!-- Image/Avatar -->
                 <div class="flex-shrink-0">
-                    <img src="https://placehold.co/150x150/3b82f6/ffffff?text=Avatar" 
-                         alt="Your Profile Picture"
+                    <img src="uploaded:image_54222e.jpg-ac3a0fd5-e369-45cb-ae1d-35879b558a96" 
+                         alt="Mohamad Khomeini fahmi Profile Picture"
                          onerror="this.onerror=null;this.src='https://placehold.co/150x150/3b82f6/ffffff?text=Avatar';"
                          class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover border-4 border-accent-blue shadow-xl">
                 </div>
@@ -96,17 +96,43 @@
                     <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">Mohamad Khomeini fahmi</h1>
                     <h2 class="text-3xl font-semibold text-accent-blue mt-2 mb-4">A Cyber Security Student</h2>
                     <p class="text-lg text-gray-300 max-w-2xl mx-auto md:mx-0">
-                        I am specializing in **vulnerability analysis** and **network defense**, focused on applying analytical skills to solve complex security challenges. My goal is to contribute to a proactive and dynamic cybersecurity environment.
+                        I am a dedicated student specializing in vulnerability analysis and network defense, focused on applying analytical skills to solve complex security challenges. My goal is to contribute to a proactive and dynamic cybersecurity environment.
                     </p>
                     
-                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
-                        <a href="#projects" class="px-6 py-3 bg-accent-blue text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105">
-                            View My Work
-                        </a>
-                        <!-- Button text and border color adjusted for dark contrast -->
-                        <a href="#contact" class="px-6 py-3 border border-text-base text-text-base font-semibold rounded-lg shadow-md hover:bg-text-base hover:text-bg-main transition duration-300 transform hover:scale-105">
-                            Get In Touch
-                        </a>
+                    <div class="mt-8 flex flex-col items-center md:items-start space-y-4">
+                        <!-- Action Buttons -->
+                        <div class="flex justify-center md:justify-start space-x-4">
+                            <a href="#projects" class="px-6 py-3 bg-accent-blue text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                                View My Work
+                            </a>
+                            <!-- The 'Get In Touch' button now scrolls to the social icons -->
+                            <a href="#social-links" class="px-6 py-3 border border-text-base text-text-base font-semibold rounded-lg shadow-md hover:bg-text-base hover:text-bg-main transition duration-300 transform hover:scale-105">
+                                Connect
+                            </a>
+                        </div>
+                        
+                        <!-- Social Icons (New location) -->
+                        <div id="social-links" class="flex justify-center md:justify-start space-x-6 pt-4">
+                            <!-- Email Icon -->
+                            <a href="mailto:khomeini6b@gmail.com" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </a>
+                            <!-- GitHub Link (Icon color adjusted) -->
+                            <a href="https://github.com/Dazaiish" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.353 3.537 9.907 8.441 11.397.616.113.844-.265.844-.592 0-.292-.01-1.066-.01-2.093-3.447.749-4.184-1.579-4.184-1.579-.563-1.423-1.373-1.8-1.373-1.8-1.125-.769.088-.755.088-.755 1.246.088 1.896 1.282 1.896 1.282 1.107 1.896 2.909 1.348 3.619 1.032.112-.805.434-1.348.791-1.659-2.768-.314-5.698-1.385-5.698-6.158 0-1.359.485-2.475 1.287-3.356-.12-.314-.56-1.594.135-3.314 0 0 1.037-.357 3.394 1.289.986-.275 2.03-.412 3.078-.417 1.048.005 2.092.142 3.078.417 2.356-1.646 3.393-1.289 3.393-1.289.695 1.72.255 3.0.135 3.314.802.881 1.287 2.0 1.287 3.356 0 4.782-2.93 5.844-5.712 6.155.449.39.843.987.843 1.99 0 1.353-.012 2.443-.012 2.775 0 .327.228.71.854.588 4.904-1.499 8.439-6.044 8.439-11.397c0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+
+                            <!-- LinkedIn Link (Icon color adjusted) -->
+                            <a href="https://www.linkedin.com/in/mohamad-khomeini-3152a7370" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764 1.002 0 1.75.79.764 1.764 1.764.79.764 1.764z 11 19h-3v-6.59c0-3.151 3.511-3.238 3.511 0v6.59z"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,37 +228,6 @@
             
             <!-- Removed: "See All Projects on GitHub" box -->
             
-        </section>
-
-        <!-- 4. Contact Section -->
-        <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Contact Me</h3>
-            
-            <div class="bg-bg-surface p-8 rounded-xl shadow-2xl text-center space-y-6">
-                <p class="text-xl text-gray-300">
-                    I'm currently seeking **internships and entry-level roles** in cybersecurity and am always open to discussing new security projects or research collaborations.
-                </p>
-                
-                <a href="mailto:your.email@example.com" class="inline-block px-8 py-4 bg-accent-blue text-white text-lg font-bold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
-                    Email Me: your.email@example.com
-                </a>
-                
-                <div class="flex justify-center space-x-6 pt-4">
-                    <!-- GitHub Link (Icon color adjusted) -->
-                    <a href="https://github.com/yourusername" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.353 3.537 9.907 8.441 11.397.616.113.844-.265.844-.592 0-.292-.01-1.066-.01-2.093-3.447.749-4.184-1.579-4.184-1.579-.563-1.423-1.373-1.8-1.373-1.8-1.125-.769.088-.755.088-.755 1.246.088 1.896 1.282 1.896 1.282 1.107 1.896 2.909 1.348 3.619 1.032.112-.805.434-1.348.791-1.659-2.768-.314-5.698-1.385-5.698-6.158 0-1.359.485-2.475 1.287-3.356-.12-.314-.56-1.594.135-3.314 0 0 1.037-.357 3.394 1.289.986-.275 2.03-.412 3.078-.417 1.048.005 2.092.142 3.078.417 2.356-1.646 3.393-1.289 3.393-1.289.695 1.72.255 3.0.135 3.314.802.881 1.287 2.0 1.287 3.356 0 4.782-2.93 5.844-5.712 6.155.449.39.843.987.843 1.99 0 1.353-.012 2.443-.012 2.775 0 .327.228.71.854.588 4.904-1.499 8.439-6.044 8.439-11.397c0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-
-                    <!-- LinkedIn Link (Icon color adjusted) -->
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764 1.002 0 1.75.79.764 1.764 1.764.79.764 1.764z 11 19h-3v-6.59c0-3.151 3.511-3.238 3.511 0v6.59z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
         </section>
 
     </main>
