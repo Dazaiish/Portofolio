@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Professional Portfolio</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Dark mode colors based on Slate
+                        'bg-main': '#0f172a',    // Slate-900
+                        'bg-surface': '#1e293b', // Slate-800
+                        'text-base': '#f1f5f9',  // Slate-100
+                        'accent-blue': '#3b82f6', // Blue-500 (High contrast accent)
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Set default font and smooth scrolling for navigation. This sets the deep dark background. */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #0f172a; /* bg-main */
+            color: #f1f5f9; /* text-base */
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-bg-main shadow-2xl border-b border-accent-blue/20">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-accent-blue hover:text-text-base transition duration-300">Your Name</a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Contact</a>
+            </div>
+            <!-- Simple Mobile Menu Button (Icon Placeholder) -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-text-base hover:bg-bg-surface transition duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-bg-main/95 backdrop-blur-sm z-40 p-6">
+        <div class="flex justify-end">
+            <button id="close-menu-btn" class="text-text-base hover:text-accent-blue transition duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col items-center space-y-8 mt-12">
+            <a href="#home" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+            <a href="#about" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+            <a href="#skills" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
+            <a href="#projects" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+            <a href="#contact" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="space-y-24 py-12">
+
+        <!-- 1. Hero Section -->
+        <section id="home" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                
+                <!-- Image/Avatar Placeholder -->
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/150x150/3b82f6/ffffff?text=Avatar" 
+                         alt="Your Profile Picture"
+                         onerror="this.onerror=null;this.src='https://placehold.co/150x150/3b82f6/ffffff?text=Avatar';"
+                         class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover border-4 border-accent-blue shadow-xl">
+                </div>
+
+                <!-- Text Content -->
+                <div class="text-center md:text-left">
+                    <p class="text-xl text-gray-400 mb-2">Hello, I'm</p>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">Your Full Name</h1>
+                    <h2 class="text-3xl font-semibold text-accent-blue mt-2 mb-4">A [Your Role] based in [Your Location]</h2>
+                    <p class="text-lg text-gray-300 max-w-2xl mx-auto md:mx-0">
+                        I specialize in **[Key Technology 1]** and **[Key Technology 2]**, building robust, scalable, and user-friendly applications. Let's create something impactful together.
+                    </p>
+                    
+                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                        <a href="#projects" class="px-6 py-3 bg-accent-blue text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                            View My Work
+                        </a>
+                        <!-- Button text and border color adjusted for dark contrast -->
+                        <a href="#contact" class="px-6 py-3 border border-text-base text-text-base font-semibold rounded-lg shadow-md hover:bg-text-base hover:text-bg-main transition duration-300 transform hover:scale-105">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Divider Line -->
+        <hr class="max-w-3xl mx-auto border-t border-slate-700">
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">About Me</h3>
+            <!-- Card background changed to a dark surface color -->
+            <div class="bg-bg-surface p-8 rounded-xl shadow-2xl space-y-6">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    I'm a passionate **[Your Role]** with [X] years of experience turning complex ideas into practical, elegant solutions. My journey began with a curiosity for **[Origin Story, e.g., command line interfaces or design principles]**, and it has evolved into a dedication to clean code and continuous learning.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Currently, I am focused on mastering **[Specific Goal/Current Focus, e.g., cloud architecture or advanced React patterns]**. I thrive in collaborative environments and strongly believe that the best products come from a blend of technical excellence and empathetic design.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    When I'm not coding, you can find me **[Personal Hobby 1, e.g., hiking mountain trails]** or **[Personal Hobby 2, e.g., experimenting with new coffee brews]**.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Technical Skills</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Category 1: Languages & Core -->
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h4 class="text-2xl font-bold text-accent-blue mb-4">Languages & Core</h4>
+                    <ul class="space-y-2 text-lg text-gray-200">
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> JavaScript (ES6+)</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Python</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> HTML5 / CSS3</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> TypeScript</li>
+                    </ul>
+                </div>
+                
+                <!-- Category 2: Frameworks & Libraries -->
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h4 class="text-2xl font-bold text-accent-blue mb-4">Frameworks & Libraries</h4>
+                    <ul class="space-y-2 text-lg text-gray-200">
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> React / Next.js</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Node.js / Express</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Tailwind CSS / Bootstrap</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Angular / Vue.js</li>
+                    </ul>
+                </div>
+
+                <!-- Category 3: Tools & Databases -->
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h4 class="text-2xl font-bold text-accent-blue mb-4">Tools & Databases</h4>
+                    <ul class="space-y-2 text-lg text-gray-200">
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Git / GitHub</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> MongoDB / PostgreSQL</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> AWS / Firebase</li>
+                        <li class="flex items-center"><span class="text-accent-blue mr-2">&bull;</span> Docker / Kubernetes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Featured Projects</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Project+1"
+                         alt="Project 1 Thumbnail"
+                         class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-2xl font-bold text-white mb-2">Project Name One</h4>
+                    <p class="text-gray-400 mb-4">
+                        A dynamic web application for [brief description of purpose]. Built using **React, Node.js, and MongoDB**. Focus on performance and clean architecture.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/yourusername/project-one" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
+                            Code (GitHub)
+                        </a>
+                        <a href="#" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
+                            Live Demo (Link)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Project+2"
+                         alt="Project 2 Thumbnail"
+                         class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-2xl font-bold text-white mb-2">Project Name Two</h4>
+                    <p class="text-gray-400 mb-4">
+                        A machine learning model for [industry application]. Developed in **Python** using **TensorFlow** and deployed on **AWS Lambda**.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/yourusername/project-two" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
+                            Code (GitHub)
+                        </a>
+                        <a href="#" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
+                            Live Demo (Link)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/400x200/94a3b8/ffffff?text=Project+3"
+                         alt="Project 3 Thumbnail"
+                         class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h4 class="text-2xl font-bold text-white mb-2">Project Name Three</h4>
+                    <p class="text-gray-400 mb-4">
+                        A full-stack mobile-first application using **Vue.js** and a **PostgreSQL** database. Designed with a focus on UX/UI best practices.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/yourusername/project-three" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
+                            Code (GitHub)
+                        </a>
+                        <a href="#" target="_blank" class="text-sm font-semibold text-accent-blue hover:underline">
+                            Live Demo (Link)
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://github.com/yourusername?tab=repositories" target="_blank" class="px-8 py-3 bg-accent-blue text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                    See All Projects on GitHub &rarr;
+                </a>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Contact Me</h3>
+            
+            <div class="bg-bg-surface p-8 rounded-xl shadow-2xl text-center space-y-6">
+                <p class="text-xl text-gray-300">
+                    I'm currently seeking **[Job Type, e.g., Full-time Frontend Roles]** and am always open to discussing new projects or creative collaborations.
+                </p>
+                
+                <a href="mailto:your.email@example.com" class="inline-block px-8 py-4 bg-accent-blue text-white text-lg font-bold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                    Email Me: your.email@example.com
+                </a>
+                
+                <div class="flex justify-center space-x-6 pt-4">
+                    <!-- GitHub Link (Icon color adjusted) -->
+                    <a href="https://github.com/yourusername" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.353 3.537 9.907 8.441 11.397.616.113.844-.265.844-.592 0-.292-.01-1.066-.01-2.093-3.447.749-4.184-1.579-4.184-1.579-.563-1.423-1.373-1.8-1.373-1.8-1.125-.769.088-.755.088-.755 1.246.088 1.896 1.282 1.896 1.282 1.107 1.896 2.909 1.348 3.619 1.032.112-.805.434-1.348.791-1.659-2.768-.314-5.698-1.385-5.698-6.158 0-1.359.485-2.475 1.287-3.356-.12-.314-.56-1.594.135-3.314 0 0 1.037-.357 3.394 1.289.986-.275 2.03-.412 3.078-.417 1.048.005 2.092.142 3.078.417 2.356-1.646 3.393-1.289 3.393-1.289.695 1.72.255 3.0.135 3.314.802.881 1.287 2.0 1.287 3.356 0 4.782-2.93 5.844-5.712 6.155.449.39.843.987.843 1.99 0 1.353-.012 2.443-.012 2.775 0 .327.228.71.854.588 4.904-1.499 8.439-6.044 8.439-11.397c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn Link (Icon color adjusted) -->
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764 1.002 0 1.75.79.764 1.764 1.764.79.764 1.764z 11 19h-3v-6.59c0-3.151 3.511-3.238 3.511 0v6.59z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-bg-main text-white mt-12 py-8 border-t border-accent-blue/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+            <p class="text-sm mt-2 text-gray-500">Template powered by Tailwind CSS and GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Simple Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close menu when a link is clicked (for smoother navigation)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
