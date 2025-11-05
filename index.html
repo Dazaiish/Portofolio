@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamad Khomeini fahmi | Professional Portfolio</title>
-    <!-- Load Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for Inter font and custom colors -->
     <script>
         tailwind.config = {
             theme: {
@@ -38,17 +36,15 @@
 
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
     <header class="sticky top-0 z-50 bg-bg-main shadow-2xl border-b border-accent-blue/20">
         <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <a href="#home" class="text-2xl font-bold text-accent-blue hover:text-text-base transition duration-300">Mohamad Khomeini fahmi</a>
             <div class="space-x-4 hidden md:flex">
-                <!-- Removed 'About' link -->
                 <a href="#skills" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Skills</a>
                 <a href="#projects" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Projects</a>
-                <!-- Removed 'Contact' link -->
-            </div>
-            <!-- Simple Mobile Menu Button (Icon Placeholder) -->
+                <a href="#experience" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Experience</a>
+                <a href="#education" class="text-gray-300 hover:text-accent-blue transition duration-200 font-medium">Education</a>
+                </div>
             <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-text-base hover:bg-bg-surface transition duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -57,7 +53,6 @@
         </nav>
     </header>
 
-    <!-- Mobile Menu Drawer (Hidden by default) -->
     <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-bg-main/95 backdrop-blur-sm z-40 p-6">
         <div class="flex justify-end">
             <button id="close-menu-btn" class="text-text-base hover:text-accent-blue transition duration-200">
@@ -68,21 +63,18 @@
         </div>
         <div class="flex flex-col items-center space-y-8 mt-12">
             <a href="#home" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
-            <!-- Removed 'About' link -->
             <a href="#skills" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
             <a href="#projects" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
-            <!-- Removed 'Contact' link -->
-        </div>
+            <a href="#experience" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Experience</a>
+            <a href="#education" class="text-text-base text-3xl font-semibold hover:text-accent-blue transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Education</a>
+            </div>
     </div>
     
-    <!-- Main Content -->
     <main class="space-y-24 py-12">
 
-        <!-- 1. Hero Section -->
         <section id="home" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 text-center">
             <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
                 
-                <!-- Image/Avatar -->
                 <div class="flex-shrink-0">
                     <img src="./image.jpg" 
                          alt="Mohamad Khomeini fahmi Profile Picture"
@@ -90,7 +82,6 @@
                          class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover border-4 border-accent-blue shadow-xl">
                 </div>
 
-                <!-- Text Content -->
                 <div class="text-center md:text-left">
                     <p class="text-xl text-gray-400 mb-2">Hello, I'm</p>
                     <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">Mohamad Khomeini fahmi</h1>
@@ -100,30 +91,24 @@
                     </p>
                     
                     <div class="mt-8 flex flex-col items-center md:items-start space-y-4">
-                        <!-- Action Buttons -->
                         <div class="flex justify-center md:justify-start space-x-4">
                             <a href="#projects" class="px-6 py-3 bg-accent-blue text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105">
                                 View My Work
                             </a>
-                            <!-- Removed: The 'Connect' button -->
-                        </div>
+                            </div>
                         
-                        <!-- Social Icons (New location) -->
                         <div id="social-links" class="flex justify-center md:justify-start space-x-6 pt-4">
-                            <!-- Email Icon -->
                             <a href="mailto:khomeini6b@gmail.com" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                                 </svg>
                             </a>
-                            <!-- GitHub Link (Icon color adjusted) -->
                             <a href="https://github.com/Dazaiish" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.353 3.537 9.907 8.441 11.397.616.113.844-.265.844-.592 0-.292-.01-1.066-.01-2.093-3.447.749-4.184-1.579-4.184-1.579-.563-1.423-1.373-1.8-1.373-1.8-1.125-.769.088-.755.088-.755 1.246.088 1.896 1.282 1.896 1.282 1.107 1.896 2.909 1.348 3.619 1.032.112-.805.434-1.348.791-1.659-2.768-.314-5.698-1.385-5.698-6.158 0-1.359.485-2.475 1.287-3.356-.12-.314-.56-1.594.135-3.314 0 0 1.037-.357 3.394 1.289.986-.275 2.03-.412 3.078-.417 1.048.005 2.092.142 3.078.417 2.356-1.646 3.393-1.289 3.393-1.289.695 1.72.255 3.0.135 3.314.802.881 1.287 2.0 1.287 3.356 0 4.782-2.93 5.844-5.712 6.155.449.39.843.987.843 1.99 0 1.353-.012 2.443-.012 2.775 0 .327.228.71.854.588 4.904-1.499 8.439-6.044 8.439-11.397c0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
 
-                            <!-- LinkedIn Link (Icon color adjusted) -->
                             <a href="https://www.linkedin.com/in/mohamad-khomeini-3152a7370" target="_blank" class="text-text-base hover:text-accent-blue transition duration-200">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764 1.002 0 1.75.79.764 1.764 1.764.79.764 1.764z 11 19h-3v-6.59c0-3.151 3.511-3.238 3.511 0v6.59z"/>
@@ -135,16 +120,13 @@
             </div>
         </section>
         
-        <!-- Divider Line -->
         <hr class="max-w-3xl mx-auto border-t border-slate-700">
 
-        <!-- 2. Skills Section -->
         <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Technical Skills</h3>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Category 1: Languages & Core -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
                     <h4 class="text-2xl font-bold text-accent-blue mb-4">Languages & Core</h4>
                     <ul class="space-y-2 text-lg text-gray-200">
@@ -153,7 +135,6 @@
                     </ul>
                 </div>
                 
-                <!-- Category 2: Security Tools -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
                     <h4 class="text-2xl font-bold text-accent-blue mb-4">Security Tools</h4>
                     <ul class="space-y-2 text-lg text-gray-200">
@@ -163,7 +144,6 @@
                     </ul>
                 </div>
 
-                <!-- Category 3: Platforms -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
                     <h4 class="text-2xl font-bold text-accent-blue mb-4">Platforms</h4>
                     <ul class="space-y-2 text-lg text-gray-200">
@@ -173,15 +153,12 @@
             </div>
         </section>
 
-        <!-- 3. Projects & Write-Ups Section -->
         <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-4xl font-bold text-white text-center mb-10 border-b-4 border-accent-blue inline-block pb-1">Projects & Write-Ups</h3>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Project Card 1: HTB - Instant -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
-                    <!-- Removed: Placeholder image -->
                     <h4 class="text-2xl font-bold text-white mb-2">Pentest: Hack The Box - Instant</h4>
                     <p class="text-gray-400 mb-4">
                         Launched a penetration testing to Instant machine. Used `apktool` to gain access to a subdomain, then used the API key found to gain higher authorizations, find credentials, and obtain root.
@@ -193,9 +170,7 @@
                     </div>
                 </div>
 
-                <!-- Project Card 2: HTB - GreenHorn -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
-                    <!-- Removed: Placeholder image -->
                     <h4 class="text-2xl font-bold text-white mb-2">Pentest: Hack The Box - GreenHorn</h4>
                     <p class="text-gray-400 mb-4">
                         Performed a penetration test on the GreenHorn machine. Exploited a CMS vulnerability, successfully launched a payload, and obtained root privileges.
@@ -207,9 +182,7 @@
                     </div>
                 </div>
 
-                <!-- Project Card 3: HTB - Resource -->
                 <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-t-4 border-accent-blue hover:shadow-2xl transition duration-300">
-                    <!-- Removed: Placeholder image -->
                     <h4 class="text-2xl font-bold text-white mb-2">Pentest: Hack The Box - Resource</h4>
                     <p class="text-gray-400 mb-4">
                         Investigated the Resource machine. Launched a payload to the website to gain initial access, extracted a credentials file to access the database, and utilized an SSH key/certificate to obtain the user flag.
@@ -223,13 +196,73 @@
                 
             </div>
             
-            <!-- Removed: "See All Projects on GitHub" box -->
+            </section>
+
+        <hr class="max-w-3xl mx-auto border-t border-slate-700">
+
+        <section id="experience" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-white mb-10 text-left">Professional Experience & Learnings</h3>
             
+            <div class="space-y-8">
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-l-4 border-accent-blue">
+                    <p class="text-lg font-semibold text-accent-blue mb-1">2025 - Present (Forthcoming)</p>
+                    <h4 class="text-2xl font-bold text-white mb-1">Cyber Security Researcher</h4>
+                    <p class="text-lg text-gray-400 mb-4">Softbank</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Honed skills in tech trend analysis and market research to identify innovative and high-potential cyber products.</li>
+                        <li>Developed communication and professional networking skills within a corporate technology environment.</li>
+                    </ul>
+                </div>
+        
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-l-4 border-accent-blue">
+                    <p class="text-lg font-semibold text-accent-blue mb-1">2023 - 2024</p>
+                    <h4 class="text-2xl font-bold text-white mb-1">Data Entry Intern</h4>
+                    <p class="text-lg text-gray-400 mb-4">Pempek Gabby (Startup)</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Developed high attention to detail and accuracy in managing product stock data.</li>
+                        <li>Applied problem-solving skills by designing templates to improve data management efficiency.</li>
+                        <li>Strengthened understanding of the importance of data integrity in business operations.</li>
+                    </ul>
+                </div>
+        
+                <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-l-4 border-accent-blue">
+                    <p class="text-lg font-semibold text-accent-blue mb-1">2023</p>
+                    <h4 class="text-2xl font-bold text-white mb-1">Network Technician</h4>
+                    <p class="text-lg text-gray-400 mb-4">DKI Jakarta provincial government</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Gained practical experience in monitoring and troubleshooting local area network (LAN) connectivity issues.</li>
+                        <li>Assisted in routine network maintenance, including hardware setup and software configuration, to ensure network uptime and security.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="max-w-3xl mx-auto border-t border-slate-700">
+
+        <section id="education" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-white mb-10 text-left">Education & Activities</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-3xl font-semibold text-white mb-6">Education</h4>
+                    <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-l-4 border-accent-blue">
+                        <p class="text-lg font-semibold text-accent-blue mb-1">2024 - 2027 (Expected)</p>
+                        <h4 class="text-2xl font-bold text-white mb-1">BSc in Cyber Security</h4>
+                        <p class="text-lg text-gray-400">Bina Nusantara University</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-3xl font-semibold text-white mb-6">Organizations</h4>
+                    <div class="bg-bg-surface p-6 rounded-xl shadow-xl border-l-4 border-accent-blue">
+                        <p class="text-gray-400 italic">(Your organizational activities will appear here)</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-bg-main text-white mt-12 py-8 border-t border-accent-blue/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p>&copy; <span id="current-year"></span> Mohamad Khomeini fahmi</p>
